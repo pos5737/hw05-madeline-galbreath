@@ -11,5 +11,5 @@ ggplot(data = df11, mapping = aes(x = decentralize, y=percent_vote)) + geom_poin
 summarize(df11, cor(decentralize, percent_vote, use = "pairwise.complete.obs"))
 
 #fit above scatter plot to regression model
-ggplot(df11, aes(x = decentralize, y = percent_vote)) + geom_point() + 
+ggplot(df11, aes(x = decentralize, y = percent_vote)) + geom_point() +  xlab("Positive Decentralization Mentions") + ylab("Percent of Vote") +
   geom_smooth(method = "lm", se = FALSE) + theme_bw()
